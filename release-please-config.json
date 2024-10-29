@@ -1,0 +1,17 @@
+{
+  "bootstrap-sha": "754cf962c53a21771bdd03a971fcf8a8aa7e27f4",
+  "include-component-in-tag": true,
+  "include-v-in-tag": false,
+  "separate-pull-requests": true,
+  "tag-separator": "@",
+  "packages": {
+    "charts/empty": {
+      "release-type": "helm",
+      "path": "charts/empty"
+    },
+    "modules/empty": {
+      "release-type": "terraform-module",
+      "path": "modules/empty"
+    }
+  }
+}
