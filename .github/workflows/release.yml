@@ -9,6 +9,8 @@ on:
       - charts/**
       - modules/**
       - .github/workflows/release.yml
+      - release-please-config.json
+      - .release-please-manifest.json
 
 permissions:
   contents: write
