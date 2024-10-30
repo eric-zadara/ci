@@ -19,11 +19,19 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - path: charts/empty
+            release-type: helm
+          - path: modules/empty
+            release-type: terraform-module
     steps:
       - uses: actions/checkout@main
       - uses: googleapis/release-please-action@v4
         id: release-please
         with:
-          token: ${{ github.token }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+          path: ${{ matrix.path }}
+          release-type: ${{ matrix.release-type }}
+          include-component-in-tag: true
