@@ -25,3 +25,4 @@ jobs:
           token: ${{ github.token }}
           include-component-in-tag: true
           release-type: helm
+          path: charts/empty
