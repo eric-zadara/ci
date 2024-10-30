@@ -18,10 +18,10 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@main
       - uses: googleapis/release-please-action@v4
         id: release-please
         with:
           token: ${{ github.token }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
-
+          include-component-in-tag: true
+          release-type: helm
