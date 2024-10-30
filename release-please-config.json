@@ -4,8 +4,6 @@
   "include-component-in-tag": true,
   "include-v-in-tag": false,
   "separate-pull-requests": true,
-  "tag-separator": "@",
-  "pull-request-title-pattern": "build${scope}: release${component} ${version}",
   "packages": {
     "charts/empty": {
       "release-type": "helm",
